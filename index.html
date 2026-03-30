@@ -5,22 +5,30 @@
 
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       text-align: center;
       background: #f4f7fb;
+      margin: 0;
+      padding: 20px;
     }
 
     h1 {
       color: #2c3e50;
+      margin-bottom: 30px;
     }
 
     .teacher {
       background: white;
-      margin: 15px auto;
-      padding: 15px;
+      margin: 20px auto;
+      padding: 20px;
       width: 320px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .teacher:hover {
+      transform: scale(1.02);
     }
 
     audio {
@@ -29,9 +37,10 @@
     }
 
     .transcript {
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 14px;
       color: #555;
+      line-height: 1.5;
     }
   </style>
 
@@ -39,21 +48,36 @@
 
 <body>
 
-<h1>Teacher Audio List</h1>
+<h1>🎧 Teacher Audio List</h1>
 
+<!-- Teacher 1 -->
 <div class="teacher">
   <h3>Anjali Ma'am</h3>
 
   <audio controls preload="auto">
-    <source src="https://pedduhudga.github.io/Saes/AUD-20260330-WA0031.aac" type="audio/aac">
-    <source src="https://pedduhudga.github.io/Saes/AUD-20260330-WA0031.aac" type="audio/mp4">
+    <source src="https://pedduhudga.github.io/Saes/anjali.mp3" type="audio/mpeg">
     Your browser does not support audio.
   </audio>
 
   <div class="transcript">
-    ಬಣ್ಣ ಬಣ್ಣದ ಪುಟಾಣಿಗಳ ಲೋಕ, ವರ್ಣರಂಜಿತ ನರ್ಸರಿ ಕೊಠಡಿಗಳು... ಇಲ್ಲಿ ಪ್ರತಿ ಗೋಡೆಯು
+    ಬಣ್ಣ ಬಣ್ಣದ ಪುಟಾಣಿಗಳ ಲೋಕ, ವರ್ಣರಂಜಿತ ನರ್ಸರಿ ಕೊಠಡಿಗಳು...
   </div>
 </div>
+
+<!-- Add more teachers like this -->
+<!--
+<div class="teacher">
+  <h3>Ravi Sir</h3>
+
+  <audio controls>
+    <source src="https://pedduhudga.github.io/Saes/ravi.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="transcript">
+    Your transcript here...
+  </div>
+</div>
+-->
 
 </body>
 </html>
