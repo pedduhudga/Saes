@@ -8,15 +8,52 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #e3f2fd, #f4f7fb);
       margin: 0;
-      padding: 20px;
+      padding: 0;
       text-align: center;
     }
 
-    h1 {
-      color: #2c3e50;
-      margin-bottom: 25px;
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: white;
+      padding: 25px 15px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
+    .header h1 {
+      margin: 5px 0;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    .header p {
+      margin: 3px 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .highlight {
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffe082;
+    }
+
+    .best {
+      margin-top: 5px;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    /* MAIN TITLE */
+    .main-title {
+      margin: 20px 0;
+      font-size: 20px;
+      color: #2c3e50;
+    }
+
+    /* TEACHER CARD */
     .teacher {
       background: white;
       margin: 15px auto;
@@ -62,7 +99,16 @@
 
 <body>
 
-<h1>🎧 Teacher Audio Library</h1>
+<!-- 🔥 HEADER -->
+<div class="header">
+  <h1>🏫 SAE SCHOOL</h1>
+  <p>Karehalli, Bhadravthi</p>
+  <p>SSLC 2025-26</p>
+  <p class="highlight">*Study Warriors*</p>
+  <p class="best">Best Wishes ✨</p>
+</div>
+
+<h2 class="main-title">🎧 Teacher Audio Library</h2>
 
 <!-- Teacher 1 -->
 <div class="teacher">
@@ -78,24 +124,7 @@
   <div id="text1" class="text"></div>
 </div>
 
-<!-- Teacher 2 Example -->
-<div class="teacher">
-  <h3>Ravi Sir</h3>
-  <button onclick="playTeacher('audio2','text2', 'Today we will learn about plant nutrition and its importance.')">
-    ▶ Play
-  </button>
-
-  <audio id="audio2">
-    <source src="https://pedduhudga.github.io/Saes/ravi.mp3" type="audio/mpeg">
-  </audio>
-
-  <div id="text2" class="text"></div>
-</div>
-
 <script>
-let currentAudio = null;
-
-// Stop all audios
 function stopAll() {
   document.querySelectorAll("audio").forEach(a => {
     a.pause();
@@ -103,7 +132,6 @@ function stopAll() {
   });
 }
 
-// Typing animation
 function typeText(element, text) {
   element.innerHTML = "";
   let i = 0;
@@ -119,13 +147,10 @@ function typeText(element, text) {
   typing();
 }
 
-// Main function
 function playTeacher(audioId, textId, text) {
   stopAll();
-
   let audio = document.getElementById(audioId);
   let textBox = document.getElementById(textId);
-
   audio.play();
   typeText(textBox, text);
 }
