@@ -1,83 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Teacher Audio Library</title>
+  <title>Teacher Audio App</title>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f4f7fb;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #f4f7fb);
       margin: 0;
       padding: 20px;
+      text-align: center;
     }
 
     h1 {
       color: #2c3e50;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .teacher {
       background: white;
-      margin: 20px auto;
+      margin: 15px auto;
       padding: 20px;
-      width: 320px;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
 
     .teacher:hover {
-      transform: scale(1.02);
+      transform: translateY(-5px);
     }
 
-    audio {
-      width: 100%;
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
       margin-top: 10px;
-    }
-
-    .transcript {
-      margin-top: 12px;
       font-size: 14px;
-      color: #555;
-      line-height: 1.5;
     }
-  </style>
 
+    button:hover {
+      background: #45a049;
+    }
+
+    .text {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #444;
+      min-height: 40px;
+      white-space: pre-line;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<h1>🎧 Teacher Audio List</h1>
+<h1>🎧 Teacher Audio Library</h1>
 
 <!-- Teacher 1 -->
 <div class="teacher">
   <h3>Anjali Ma'am</h3>
+  <button onclick="playTeacher('audio1','text1', 'ಬಣ್ಣ ಬಣ್ಣದ ಪುಟಾಣಿಗಳ ಲೋಕ, ವರ್ಣರಂಜಿತ ನರ್ಸರಿ ಕೊಠಡಿಗಳು... ಇಲ್ಲಿ ಪ್ರತಿ ಗೋಡೆಯು')">
+    ▶ Play
+  </button>
 
-  <audio controls preload="auto">
+  <audio id="audio1">
     <source src="https://pedduhudga.github.io/Saes/anjali.mp3" type="audio/mpeg">
-    Your browser does not support audio.
   </audio>
 
-  <div class="transcript">
-    ಬಣ್ಣ ಬಣ್ಣದ ಪುಟಾಣಿಗಳ ಲೋಕ, ವರ್ಣರಂಜಿತ ನರ್ಸರಿ ಕೊಠಡಿಗಳು...
-  </div>
+  <div id="text1" class="text"></div>
 </div>
 
-<!-- Add more teachers like this -->
-<!--
+<!-- Teacher 2 Example -->
 <div class="teacher">
   <h3>Ravi Sir</h3>
+  <button onclick="playTeacher('audio2','text2', 'Today we will learn about plant nutrition and its importance.')">
+    ▶ Play
+  </button>
 
-  <audio controls>
+  <audio id="audio2">
     <source src="https://pedduhudga.github.io/Saes/ravi.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="transcript">
-    Your transcript here...
-  </div>
+  <div id="text2" class="text"></div>
 </div>
--->
+
+<script>
+let currentAudio = null;
+
+// Stop all audios
+function stopAll() {
+  document.querySelectorAll("audio").forEach(a => {
+    a.pause();
+    a.currentTime = 0;
+  });
+}
+
+// Typing animation
+function typeText(element, text) {
+  element.innerHTML = "";
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 30);
+    }
+  }
+
+  typing();
+}
+
+// Main function
+function playTeacher(audioId, textId, text) {
+  stopAll();
+
+  let audio = document.getElementById(audioId);
+  let textBox = document.getElementById(textId);
+
+  audio.play();
+  typeText(textBox, text);
+}
+</script>
 
 </body>
 </html>
