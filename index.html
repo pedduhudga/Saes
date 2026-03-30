@@ -23,14 +23,9 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    button {
-      padding: 10px 20px;
+    audio {
+      width: 100%;
       margin-top: 10px;
-      border: none;
-      background: #3498db;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
     }
 
     .transcript {
@@ -48,7 +43,9 @@
 
 <div class="teacher">
   <h3>Ravi Sir</h3>
-  <button onclick="playAudio('AUDIO_LINK_1')">▶ Play Audio</button>
+  <audio controls>
+    <source src="https://pedduhudga.github.io/Saes/ravi.mp3" type="audio/mpeg">
+  </audio>
   <div class="transcript">
     Today we will learn about plant nutrition...
   </div>
@@ -56,23 +53,13 @@
 
 <div class="teacher">
   <h3>Anjali Ma'am</h3>
-  <button onclick="playAudio('https://drive.google.com/uc?export=download&id=1l4ZjOMUPa_n5HXDq35bvwUCmgaR3ezfy')">
-    ▶ Play Audio
-  </button>
+  <audio controls>
+    <source src="https://pedduhudga.github.io/Saes/anjali.mp3" type="audio/mpeg">
+  </audio>
   <div class="transcript">
     ಬಣ್ಣ ಬಣ್ಣದ ಪುಟಾಣಿಗಳ ಲೋಕ, ವರ್ಣರಂಜಿತ ನರ್ಸರಿ ಕೊಠಡಿಗಳು... ಇಲ್ಲಿ ಪ್ರತಿ ಗೋಡೆಯು
   </div>
 </div>
-
-<script>
-  let currentAudio = new Audio();
-
-  function playAudio(url) {
-    currentAudio.pause();  // stop previous
-    currentAudio = new Audio(url);
-    currentAudio.play();
-  }
-</script>
 
 </body>
 </html>
