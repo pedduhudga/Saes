@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teacher Audio Library</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f4f7fb;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .teacher {
+      background: white;
+      margin: 15px auto;
+      padding: 15px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      background: #3498db;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .transcript {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Teacher Audio List</h1>
+
+<div class="teacher">
+  <h3>Ravi Sir</h3>
+  <audio controls>
+    <source src="YOUR_GOOGLE_DRIVE_LINK" type="audio/mpeg">
+  </audio>
+  <div class="transcript">
+    Today we will learn about plant nutrition...
+  </div>
+</div>
+
+<div class="teacher">
+  <h3>Anjali Ma'am</h3>
+  <audio controls>
+    <source src="YOUR_GOOGLE_DRIVE_LINK_2" type="audio/mpeg">
+  </audio>
+  <div class="transcript">
+    This session covers herbicide application...
+  </div>
+</div>
+
+</body>
+</html>
