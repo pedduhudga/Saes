@@ -14,59 +14,57 @@
 
     /* HEADER */
     .header {
-      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: white;
-      padding: 25px 15px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      padding: 30px 15px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
     }
 
-    .header h1 {
-      margin: 5px 0;
-      font-size: 22px;
-      letter-spacing: 1px;
+    .school-name {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #ffe082;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
-    .header p {
-      margin: 3px 0;
+    .location {
       font-size: 14px;
       opacity: 0.9;
+      margin-top: 5px;
     }
 
-    .highlight {
-      font-size: 16px;
+    .sslc {
+      font-size: 15px;
+      margin-top: 5px;
+    }
+
+    .warriors {
+      font-size: 18px;
       font-weight: bold;
-      color: #ffe082;
+      color: #ffeb3b;
+      margin-top: 8px;
     }
 
     .best {
-      margin-top: 5px;
-      font-size: 14px;
+      font-size: 16px;
+      margin-top: 8px;
       font-style: italic;
+      color: #ffffff;
+      letter-spacing: 1px;
     }
 
-    /* MAIN TITLE */
-    .main-title {
-      margin: 20px 0;
-      font-size: 20px;
-      color: #2c3e50;
-    }
-
-    /* TEACHER CARD */
+    /* CARD */
     .teacher {
       background: white;
-      margin: 15px auto;
+      margin: 25px auto;
       padding: 20px;
       width: 90%;
       max-width: 350px;
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .teacher:hover {
-      transform: translateY(-5px);
     }
 
     button {
@@ -77,11 +75,6 @@
       border-radius: 8px;
       cursor: pointer;
       margin-top: 10px;
-      font-size: 14px;
-    }
-
-    button:hover {
-      background: #45a049;
     }
 
     .text {
@@ -89,7 +82,6 @@
       font-size: 15px;
       color: #444;
       min-height: 40px;
-      white-space: pre-line;
       border-top: 1px solid #eee;
       padding-top: 10px;
     }
@@ -99,20 +91,19 @@
 
 <body>
 
-<!-- 🔥 HEADER -->
+<!-- 🔥 PREMIUM HEADER -->
 <div class="header">
-  <h1>🏫 SAE SCHOOL</h1>
-  <p>Karehalli, Bhadravthi</p>
-  <p>SSLC 2025-26</p>
-  <p class="highlight">*Study Warriors*</p>
-  <p class="best">Best Wishes ✨</p>
+  <div class="school-name">🏫 SAE SCHOOL</div>
+  <div class="location">Karehalli, Bhadravthi</div>
+  <div class="sslc">SSLC 2025-26</div>
+  <div class="warriors">✨ Study Warriors ✨</div>
+  <div class="best">💐 Best Wishes 💐</div>
 </div>
 
-<h2 class="main-title">🎧 Teacher Audio Library</h2>
-
-<!-- Teacher 1 -->
+<!-- Teacher Card -->
 <div class="teacher">
   <h3>Anjali Ma'am</h3>
+
   <button onclick="playTeacher('audio1','text1', 'ಬಣ್ಣ ಬಣ್ಣದ ಪುಟಾಣಿಗಳ ಲೋಕ, ವರ್ಣರಂಜಿತ ನರ್ಸರಿ ಕೊಠಡಿಗಳು... ಇಲ್ಲಿ ಪ್ರತಿ ಗೋಡೆಯು')">
     ▶ Play
   </button>
