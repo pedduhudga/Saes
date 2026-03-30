@@ -2,15 +2,18 @@
 <html>
 <head>
   <title>Teacher Audio Library</title>
+
   <style>
     body {
       font-family: Arial;
       text-align: center;
       background: #f4f7fb;
     }
+
     h1 {
       color: #2c3e50;
     }
+
     .teacher {
       background: white;
       margin: 15px auto;
@@ -19,6 +22,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
     button {
       padding: 10px 20px;
       margin-top: 10px;
@@ -28,12 +32,14 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     .transcript {
       margin-top: 10px;
       font-size: 14px;
       color: #555;
     }
   </style>
+
 </head>
 
 <body>
@@ -42,9 +48,7 @@
 
 <div class="teacher">
   <h3>Ravi Sir</h3>
-  <audio controls>
-    <source src="YOUR_GOOGLE_DRIVE_LINK" type="audio/mpeg">
-  </audio>
+  <button onclick="playAudio('AUDIO_LINK_1')">▶ Play Audio</button>
   <div class="transcript">
     Today we will learn about plant nutrition...
   </div>
@@ -52,12 +56,23 @@
 
 <div class="teacher">
   <h3>Anjali Ma'am</h3>
-  <audio controls>
-    <source src="https://drive.google.com/uc?export=download&id=1l4ZjOMUPa_n5HXDq35bvwUCmgaR3ezfy" type="audio/mpeg">
+  <button onclick="playAudio('https://drive.google.com/uc?export=download&id=1l4ZjOMUPa_n5HXDq35bvwUCmgaR3ezfy')">
+    ▶ Play Audio
+  </button>
   <div class="transcript">
-    ಬಣ್ಣ ಬಣ್ಣದ ಪುಟಾಣಿಗಳ ಲೋಕ,  ವರ್ಣರಂಜಿತ ನರ್ಸರಿ ಕೊಠಡಿಗಳು...ಇಲ್ಲಿ ಪ್ರತಿ ಗೋಡೆಯು
+    ಬಣ್ಣ ಬಣ್ಣದ ಪುಟಾಣಿಗಳ ಲೋಕ, ವರ್ಣರಂಜಿತ ನರ್ಸರಿ ಕೊಠಡಿಗಳು... ಇಲ್ಲಿ ಪ್ರತಿ ಗೋಡೆಯು
   </div>
 </div>
+
+<script>
+  let currentAudio = new Audio();
+
+  function playAudio(url) {
+    currentAudio.pause();  // stop previous
+    currentAudio = new Audio(url);
+    currentAudio.play();
+  }
+</script>
 
 </body>
 </html>
