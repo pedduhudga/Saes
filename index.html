@@ -8,58 +8,39 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #e3f2fd, #f4f7fb);
       margin: 0;
-      padding: 0;
       text-align: center;
     }
 
-    /* HEADER */
     .header {
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: white;
       padding: 30px 15px;
       border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
     }
 
     .school-name {
       font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
+      font-weight: bold;
       color: #ffe082;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-    }
-
-    .location {
-      font-size: 14px;
-      margin-top: 5px;
-    }
-
-    .sslc {
-      font-size: 15px;
-      margin-top: 5px;
     }
 
     .warriors {
       font-size: 18px;
-      font-weight: bold;
       color: #ffeb3b;
       margin-top: 8px;
     }
 
-    /* 🔥 BEST WISHES OUTSIDE */
     .best-outside {
-      margin: 20px 0 10px;
+      margin: 20px 0;
       font-size: 20px;
       font-weight: bold;
       color: #2c3e50;
-      letter-spacing: 1px;
     }
 
-    /* CARD */
     .teacher {
       background: white;
-      margin: 20px auto;
+      margin: 15px auto;
       padding: 20px;
       width: 90%;
       max-width: 350px;
@@ -85,36 +66,78 @@
       border-top: 1px solid #eee;
       padding-top: 10px;
     }
-
   </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <div class="header">
   <div class="school-name">🏫 SAE SCHOOL</div>
-  <div class="location">Karehalli, Bhadravthi</div>
-  <div class="sslc">SSLC 2025-26</div>
+  <div>Karehalli, Bhadravthi</div>
+  <div>SSLC 2025-26</div>
   <div class="warriors">✨ Study Warriors ✨</div>
 </div>
 
-<!-- 🔥 BEST WISHES OUTSIDE -->
 <div class="best-outside">💐 Best Wishes 💐</div>
 
-<!-- TEACHER CARD -->
+<!-- 1️⃣ RAVIKUMAR V -->
 <div class="teacher">
-  <h3>Anjali Ma'am</h3>
-
-  <button onclick="playTeacher('audio1','text1', 'ಬಣ್ಣ ಬಣ್ಣದ ಪುಟಾಣಿಗಳ ಲೋಕ, ವರ್ಣರಂಜಿತ ನರ್ಸರಿ ಕೊಠಡಿಗಳು... ಇಲ್ಲಿ ಪ್ರತಿ ಗೋಡೆಯು')">
-    ▶ Play
-  </button>
-
+  <h3>RAVIKUMAR V</h3>
+  <button onclick="toggleAudio('audio1','text1','Your transcript here')">▶ Play</button>
   <audio id="audio1">
-    <source src="https://pedduhudga.github.io/Saes/anjali.mp3" type="audio/mpeg">
+    <source src="https://pedduhudga.github.io/Saes/Ravikumar%20V.mp3" type="audio/mpeg">
   </audio>
-
   <div id="text1" class="text"></div>
+</div>
+
+<!-- 2️⃣ ASHOK K -->
+<div class="teacher">
+  <h3>ASHOK K</h3>
+  <button onclick="toggleAudio('audio2','text2','Your transcript here')">▶ Play</button>
+  <audio id="audio2">
+    <source src="https://pedduhudga.github.io/Saes/Ashok%20K.mp3" type="audio/mpeg">
+  </audio>
+  <div id="text2" class="text"></div>
+</div>
+
+<!-- 3️⃣ B NAGARATHNA -->
+<div class="teacher">
+  <h3>B NAGARATHNA</h3>
+  <button onclick="toggleAudio('audio3','text3','Your transcript here')">▶ Play</button>
+  <audio id="audio3">
+    <source src="https://pedduhudga.github.io/Saes/B%20Nagarathna.mp3" type="audio/mpeg">
+  </audio>
+  <div id="text3" class="text"></div>
+</div>
+
+<!-- 4️⃣ GIRISH G H -->
+<div class="teacher">
+  <h3>GIRISH G H</h3>
+  <button onclick="toggleAudio('audio4','text4','Your transcript here')">▶ Play</button>
+  <audio id="audio4">
+    <source src="https://pedduhudga.github.io/Saes/Girish%20G%20H.mp3" type="audio/mpeg">
+  </audio>
+  <div id="text4" class="text"></div>
+</div>
+
+<!-- 5️⃣ SANGEETHA PUSHPA T D -->
+<div class="teacher">
+  <h3>SANGEETHA PUSHPA T D</h3>
+  <button onclick="toggleAudio('audio5','text5','Your transcript here')">▶ Play</button>
+  <audio id="audio5">
+    <source src="https://pedduhudga.github.io/Saes/Sangeetha%20Pushpa%20T%20D.mp3" type="audio/mpeg">
+  </audio>
+  <div id="text5" class="text"></div>
+</div>
+
+<!-- 6️⃣ BINDU B N -->
+<div class="teacher">
+  <h3>BINDU B N</h3>
+  <button onclick="toggleAudio('audio6','text6','Your transcript here')">▶ Play</button>
+  <audio id="audio6">
+    <source src="https://pedduhudga.github.io/Saes/Bindu%20B%20N.mp3" type="audio/mpeg">
+  </audio>
+  <div id="text6" class="text"></div>
 </div>
 
 <script>
@@ -122,6 +145,10 @@ function stopAll() {
   document.querySelectorAll("audio").forEach(a => {
     a.pause();
     a.currentTime = 0;
+  });
+
+  document.querySelectorAll("button").forEach(b => {
+    b.innerText = "▶ Play";
   });
 }
 
@@ -133,19 +160,27 @@ function typeText(element, text) {
     if (i < text.length) {
       element.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typing, 30);
+      setTimeout(typing, 25);
     }
   }
 
   typing();
 }
 
-function playTeacher(audioId, textId, text) {
-  stopAll();
+function toggleAudio(audioId, textId, text) {
   let audio = document.getElementById(audioId);
+  let button = event.target;
   let textBox = document.getElementById(textId);
-  audio.play();
-  typeText(textBox, text);
+
+  if (audio.paused) {
+    stopAll();
+    audio.play();
+    button.innerText = "⏸ Pause";
+    typeText(textBox, text);
+  } else {
+    audio.pause();
+    button.innerText = "▶ Play";
+  }
 }
 </script>
 
