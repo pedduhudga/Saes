@@ -62,9 +62,10 @@
       margin-top: 12px;
       font-size: 15px;
       color: #444;
-      min-height: 40px;
+      min-height: 50px;
       border-top: 1px solid #eee;
       padding-top: 10px;
+      white-space: pre-line;
     }
   </style>
 </head>
@@ -83,7 +84,7 @@
 <!-- 1️⃣ RAVIKUMAR V -->
 <div class="teacher">
   <h3>RAVIKUMAR V</h3>
-  <button onclick="toggleAudio('audio1','text1','Your transcript here')">▶ Play</button>
+  <button onclick="toggleAudio('audio1','text1', `Jai Shri Gurudev. Be optimistic, be positive. Things will come to you at the right time. Concentrate on your aim. Dream big. Waiting for you as a resource person. May I come in sir or madam.`)">▶ Play</button>
   <audio id="audio1">
     <source src="https://pedduhudga.github.io/Saes/Ravikumar%20V.mp3" type="audio/mpeg">
   </audio>
@@ -103,7 +104,7 @@
 <!-- 3️⃣ B NAGARATHNA -->
 <div class="teacher">
   <h3>B NAGARATHNA</h3>
-  <button onclick="toggleAudio('audio3','text3','Your transcript here')">▶ Play</button>
+  <button onclick="toggleAudio('audio3','text3', `सफलता एक सरल शब्द है लेकिन इसमें हजारों कठिनाइयां छिपी है। हर चुनौती में आप अपनी नियति स्वयं रचने की शक्ति है। ज्ञान पर भरोसा रखो। आशा है कि आप अपने लक्ष्य की प्राप्ति के मार्ग पर विजय प्राप्त करेंगे। आपका भविष्य समृद्ध हो।`)">▶ Play</button>
   <audio id="audio3">
     <source src="https://pedduhudga.github.io/Saes/B%20Nagarathna.mp3" type="audio/mpeg">
   </audio>
@@ -113,7 +114,7 @@
 <!-- 4️⃣ GIRISH G H -->
 <div class="teacher">
   <h3>GIRISH G H</h3>
-  <button onclick="toggleAudio('audio4','text4','Your transcript here')">▶ Play</button>
+  <button onclick="toggleAudio('audio4','text4', `ಜ್ಞಾನದ ಬೆಳಕಿನಲ್ಲಿ ಮುಂದೆ ಸಾಗಿ ಜೀವನದಲ್ಲಿ ಶ್ರೇಯಸ್ಸು ಪಡೆಯಿರಿ. ವಿದ್ಯಾರ್ಥಿ ಜೀವನದ ಶ್ರಮವು ನಿಮ್ಮ ಭವಿಷ್ಯವನ್ನು ಉಜ್ವಲಗೊಳಿಸಲಿ. ಶಿಕ್ಷಣದ ಮೂಲಕ ಸಮಾಜಕ್ಕೆ ಸೇವೆ ಸಲ್ಲಿಸಿ ಸುಖ ಶಾಂತಿ ಪಡೆಯಿರಿ.`)">▶ Play</button>
   <audio id="audio4">
     <source src="https://pedduhudga.github.io/Saes/Girish%20G%20H.mp3" type="audio/mpeg">
   </audio>
@@ -123,7 +124,7 @@
 <!-- 5️⃣ SANGEETHA PUSHPA T D -->
 <div class="teacher">
   <h3>SANGEETHA PUSHPA T D</h3>
-  <button onclick="toggleAudio('audio5','text5','Your transcript here')">▶ Play</button>
+  <button onclick="toggleAudio('audio5','text5', `ಗುರಿ ಎಡೆಗೆ ಹೆಜ್ಜೆ ಹಾಕುತ್ತಿರುವ ನಿಮ್ಮ ಶ್ರಮ ಸಾಧನೆಯ ಶಿಖರದೊಂದಿಗೆ ಪರಿಚಯವಾಗಲಿ.`)">▶ Play</button>
   <audio id="audio5">
     <source src="https://pedduhudga.github.io/Saes/Sangeetha%20Pushpa%20T%20D.mp3" type="audio/mpeg">
   </audio>
@@ -133,7 +134,7 @@
 <!-- 6️⃣ BINDU B N -->
 <div class="teacher">
   <h3>BINDU B N</h3>
-  <button onclick="toggleAudio('audio6','text6','Your transcript here')">▶ Play</button>
+  <button onclick="toggleAudio('audio6','text6', `Wishing you all with immense success and fulfillment in your future endeavors.`)">▶ Play</button>
   <audio id="audio6">
     <source src="https://pedduhudga.github.io/Saes/Bindu%20B%20N.mp3" type="audio/mpeg">
   </audio>
@@ -160,7 +161,7 @@ function typeText(element, text) {
     if (i < text.length) {
       element.innerHTML += text.charAt(i);
       i++;
-      setTimeout(typing, 25);
+      setTimeout(typing, 20);
     }
   }
 
